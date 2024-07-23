@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from os import urandom
 from src.web.config import config
 from src.core import database, seeds
+from src.web.controllers.user import users_blueprint
 
 
 def create_app(env="development", static_folder="../../static"):
@@ -14,6 +15,10 @@ def create_app(env="development", static_folder="../../static"):
 
     # Inicializo la base de datos
     database.init_app(app)
+
+    # Registramos las rutas con blueprint
+    app.register_blueprint(users_blueprint)
+
 
     @app.get("/")
     def entry_point():
