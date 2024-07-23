@@ -5,7 +5,7 @@ class Config(object):
     '''
         Configuración base: en esta sección va toda la configuración que es común a todos.
     '''
-
+    load_dotenv()
     SECRET_KEY = 'fdkjshfhjsdfdskfdsfdcbsjdkfdsdf'
     TESTING = False
     DEBUG = False
@@ -37,7 +37,6 @@ class DevelopmentConfig(Config):
     DB_PASS = environ.get("DB_PASS")
     DB_HOST = environ.get("DB_HOST")
     DB_NAME = environ.get("DB_NAME")
-    SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_DATABASE_URI = (
         f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:5432/{DB_NAME}"
     )

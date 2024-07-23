@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from os import urandom
 from src.web.config import config
+from src.core import database, seeds
 
 
 def create_app(env="development", static_folder="../../static"):
@@ -11,8 +12,28 @@ def create_app(env="development", static_folder="../../static"):
     app.secret_key = urandom(24)
     app.config.from_object(config[env])
 
+    # Inicializo la base de datos
+    database.init_app(app)
+
     @app.get("/")
     def entry_point():
         return render_template("home.html")
+    
+    @app.cli.command(name="resetdb")
+    def resetdb():
+        '''
+            Función para reiniciar la base de datos. La forma de llamar a esta funcionalidad es mediante el
+            comando "flask resetdb"
+        '''
+        database.reset_db()
+    
+    @app.cli.command(name="seedsdb")
+    def seedsdb():
+        '''
+            Función para cargar la bd con datos genéricos. La forma de llamar a esta funcionalidad es mediante el
+            comando "flask seedsdb"
+        '''
+        seeds.run()
+
 
     return app
