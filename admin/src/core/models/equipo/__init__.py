@@ -2,7 +2,7 @@ from src.core.models.user.user import User
 from src.core.bcrypt import bcrypt
 from src.core.database import db
 
-def create_user(**kwargs):
+def create_equipo(**kwargs):
     '''
         Crea un usuario. Si incluye el parámetro password, lo hashea.
     '''
