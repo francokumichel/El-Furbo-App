@@ -1,6 +1,6 @@
 from src.core.database import db
 
-class Equipo(db.Model): #En proceso todo el contenido de rchivos en este nivel
+class User(db.Model): #En proceso todo el contenido de rchivos en este nivel
     __tablename__ = "user"
 
     id = db.Column(db.Integer, primary_key=True, unique=True)

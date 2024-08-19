@@ -20,15 +20,13 @@
 
 <summary>Detalles sobre poetry </summary>
 
-### Luego de ejecutar poetry install
-
-Se genera un archivo poetry.lock el cuál contiene las dependencias que instala en el proyecto
+Se genera el archivo *poetry.lock*, dónde se almacenan las dependencias instaladas para el proyecto
 
 ### Luego, podemos utilizar poetry directamente activando el entorno.
 ```sh
    poetry shell
 ```
 
-> *Activando el entorno nos libera de ejecutar poetry antes de ejecutar nuestro código*
+> *Activando el entorno nos liberamos de ejecutar poetry antes de ejecutar nuestro código*
 
 </details>
