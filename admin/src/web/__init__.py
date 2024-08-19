@@ -22,7 +22,7 @@ def create_app(env="development", static_folder="../../static"):
 
     @app.get("/")
     def entry_point():
-        return render_template("home.html")
+        return render_template("layout/layout.html")
     
     @app.cli.command(name="resetdb")
     def resetdb():
