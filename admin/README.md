@@ -29,7 +29,6 @@ Se genera un archivo poetry.lock el cuál contiene las dependencias que instala 
    poetry shell
 ```
 
-> [!TIP]
-> *Activando el entorno nos libera de ejecutar poetry run cada vez que ejecutemos nuestro código*
+> *Activando el entorno nos libera de ejecutar poetry antes de ejecutar nuestro código*
 
 </details>
