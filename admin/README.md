@@ -30,6 +30,6 @@ Se genera un archivo poetry.lock el cuál contiene las dependencias que instala 
 ```
 
 > [!TIP]
-> Notamos que si usamos el entorno activo, no es necesario ejecutar poetry run cada vez qu ejecutemos nuestro código
+> *Activando el entorno nos libera de ejecutar poetry run cada vez que ejecutemos nuestro código*
 
 </details>
